@@ -152,7 +152,12 @@ const Header = () => {
                         title="Cart"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        <p> Cart</p>
+                        <div className="relative">
+                          <p>Cart</p>
+                          <p className="absolute -top-2 left-10">
+                            {cart.length}
+                          </p>
+                        </div>
                       </Link>
                     </li>
                     <li>
