@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 import { addToDb } from "../utils/fakeDB";
 import Product from "./Product";
-import { productContext } from "./Root";
+import { cartContext, productContext } from "./Root";
 
 const Shop = () => {
   const products = useContext(productContext);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useContext(cartContext);
   const handleAddToCart = (product) => {
     let newCart = [];
     const exists = cart.find((item) => item.id === product.id);
